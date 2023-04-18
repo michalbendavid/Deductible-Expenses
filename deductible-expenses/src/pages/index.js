@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import "./index.css";
 // import App from "./App";
 import Home from "./Home";
 
-import AuthProvider from "../context/auth.Context";
+import { AuthProvider } from "../context/auth.Context";
 import Register from "./Register";
 import Login from "./Login";
 
 const AppRouter = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={Home} />
+        <Route path="/register" element={Register} />
+        <Route path="/login" element={Login} />
+      </Routes>
     </Router>
   );
 };
@@ -32,3 +32,5 @@ if (typeof document !== "undefined") {
     rootElement
   );
 }
+export default AppRouter;
+

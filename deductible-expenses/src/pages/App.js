@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 // import '../styles/App.css';
-// import Navbar from './components/Navbar';
+import Navbar from './Navbar';
 import { useAuth } from '../context/auth.Context';
 
 function App() {
